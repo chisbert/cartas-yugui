@@ -1,0 +1,8 @@
+{
+  "name": "Yu-Gi-Oh! Deck & Card Master EU",
+  "description": "Catálogo y coleccionador oficial de cartas Yu-Gi-Oh! para Europa en español. Busca por expansiones, gestiona rarezas por copia, cartas numeradas y sombreado visual de faltantes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

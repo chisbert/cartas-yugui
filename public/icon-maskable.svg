@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgMask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f17"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="goldMask" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="25%" stop-color="#f59e0b"/>
+      <stop offset="70%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="glowMask" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Full-bleed background (Android maskable requirement) -->
+  <rect width="512" height="512" fill="url(#bgMask)"/>
+
+  <!-- Safe zone inner content scaled to 78% centered -->
+  <g transform="translate(56, 56) scale(0.78)">
+    <!-- Millennium Eye Centerpiece -->
+    <circle cx="256" cy="220" r="140" fill="#0f172a" stroke="url(#goldMask)" stroke-width="8" filter="url(#glowMask)"/>
+    
+    <!-- Millennium Eye Symbol -->
+    <g transform="translate(256, 210) scale(1.6)">
+      <!-- Eyebrow/Arc -->
+      <path d="M-45,-25 Q0,-50 45,-25" fill="none" stroke="url(#goldMask)" stroke-width="6" stroke-linecap="round"/>
+      <!-- Eye contour -->
+      <path d="M-45,-10 Q0,25 45,-10 Q0,-40 -45,-10 Z" fill="url(#goldMask)" opacity="0.25"/>
+      <path d="M-45,-10 Q0,25 45,-10 Q0,-40 -45,-10 Z" fill="none" stroke="url(#goldMask)" stroke-width="5"/>
+      <!-- Pupil & Iris -->
+      <circle cx="0" cy="-6" r="14" fill="#0b0f17" stroke="url(#goldMask)" stroke-width="4"/>
+      <circle cx="0" cy="-6" r="6" fill="url(#goldMask)"/>
+      <circle cx="3" cy="-9" r="2.5" fill="#ffffff"/>
+      <!-- Lower decorative drops -->
+      <path d="M0,15 L0,32" stroke="url(#goldMask)" stroke-width="5" stroke-linecap="round"/>
+      <path d="M-20,10 L-26,24" stroke="url(#goldMask)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M20,10 L26,24" stroke="url(#goldMask)" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <!-- Bottom label within safe zone -->
+    <rect x="96" y="380" width="320" height="48" rx="12" fill="#090d16" stroke="url(#goldMask)" stroke-width="3"/>
+    <text x="256" y="411" font-family="'Cinzel', serif, sans-serif" font-weight="900" font-size="22" fill="#fef08a" text-anchor="middle" letter-spacing="4">YU-GI-OH! EU</text>
+  </g>
+</svg>
